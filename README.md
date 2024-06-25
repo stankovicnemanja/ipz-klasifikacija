@@ -1,5 +1,6 @@
 # Inženjerstvo podataka i znanja - projekat 3 - Klasifikacija
 ## Dataset
+Iskoristili smo dataset koji sadrži informacije o pacijentu kao i to da li boluje od dijabetesa ili ne i na osnovu toga ga klasifikuje.
 https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset
 ## Priprema podataka
 - **Čišćenje od pogrešnih vrednosti.** weka.filters.unsupervised.instance.RemoveWithValues sa matchMissingValues na True i attributeIndex na last kako bi matchovao sve instance kojima fali atribut "diabetes" i uklonio ih.
