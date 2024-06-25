@@ -1,0 +1,886 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     diabetes_prediction_dataset-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Lfirst-last-M-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-Rfirst-last-precision6-unset-class-temporarily-weka.filters.supervised.instance.ClassBalancer-num-intervals10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L2
+Instances:    64184
+Attributes:   9
+              gender
+              age
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              HbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+blood_glucose_level = '(-inf-0.5]'
+|   HbA1c_level = '(-inf-0.5]'
+|   |   age = '(-inf-0.5]'
+|   |   |   hypertension = '(-inf-0.5]': '(-inf-0.5]' (10841.24/688.24)
+|   |   |   hypertension = '(0.5-inf)'
+|   |   |   |   smoking_history = never: '(-inf-0.5]' (160.21/70.59)
+|   |   |   |   smoking_history = No Info: '(-inf-0.5]' (0.0)
+|   |   |   |   smoking_history = current: '(-inf-0.5]' (47.96/5.88)
+|   |   |   |   smoking_history = former
+|   |   |   |   |   heart_disease = '(-inf-0.5]': '(-inf-0.5]' (16.39)
+|   |   |   |   |   heart_disease = '(0.5-inf)': '(0.5-inf)' (6.43/0.55)
+|   |   |   |   smoking_history = ever: '(0.5-inf)' (27.48/9.84)
+|   |   |   |   smoking_history = not current: '(-inf-0.5]' (14.63/5.88)
+|   |   age = '(0.5-inf)'
+|   |   |   heart_disease = '(-inf-0.5]'
+|   |   |   |   hypertension = '(-inf-0.5]'
+|   |   |   |   |   bmi = '(-inf-0.5]': '(-inf-0.5]' (16271.52/4952.94)
+|   |   |   |   |   bmi = '(0.5-inf)': '(0.5-inf)' (120.73/44.26)
+|   |   |   |   hypertension = '(0.5-inf)': '(0.5-inf)' (3260.04/1507.1)
+|   |   |   heart_disease = '(0.5-inf)'
+|   |   |   |   hypertension = '(-inf-0.5]'
+|   |   |   |   |   smoking_history = never: '(0.5-inf)' (560.59/207.65)
+|   |   |   |   |   smoking_history = No Info: '(0.5-inf)' (0.0)
+|   |   |   |   |   smoking_history = current: '(0.5-inf)' (181.42/81.42)
+|   |   |   |   |   smoking_history = former
+|   |   |   |   |   |   gender = Female: '(-inf-0.5]' (97.33/47.06)
+|   |   |   |   |   |   gender = Male: '(0.5-inf)' (327.29/150.82)
+|   |   |   |   |   |   gender = Other: '(0.5-inf)' (0.0)
+|   |   |   |   |   smoking_history = ever
+|   |   |   |   |   |   gender = Female: '(-inf-0.5]' (35.26/11.76)
+|   |   |   |   |   |   gender = Male: '(0.5-inf)' (87.5/40.44)
+|   |   |   |   |   |   gender = Other: '(-inf-0.5]' (0.0)
+|   |   |   |   |   smoking_history = not current
+|   |   |   |   |   |   gender = Female: '(0.5-inf)' (51.27/21.86)
+|   |   |   |   |   |   gender = Male: '(-inf-0.5]' (60.82/17.65)
+|   |   |   |   |   |   gender = Other: '(-inf-0.5]' (0.0)
+|   |   |   |   hypertension = '(0.5-inf)': '(0.5-inf)' (617.94/188.52)
+|   HbA1c_level = '(0.5-inf)'
+|   |   age = '(-inf-0.5]'
+|   |   |   hypertension = '(-inf-0.5]'
+|   |   |   |   bmi = '(-inf-0.5]'
+|   |   |   |   |   smoking_history = never: '(-inf-0.5]' (1815.75/529.41)
+|   |   |   |   |   smoking_history = No Info: '(-inf-0.5]' (0.0)
+|   |   |   |   |   smoking_history = current: '(-inf-0.5]' (521.47/217.65)
+|   |   |   |   |   smoking_history = former
+|   |   |   |   |   |   gender = Female: '(-inf-0.5]' (147.77/64.71)
+|   |   |   |   |   |   gender = Male
+|   |   |   |   |   |   |   heart_disease = '(-inf-0.5]': '(-inf-0.5]' (61.62/5.88)
+|   |   |   |   |   |   |   heart_disease = '(0.5-inf)': '(0.5-inf)' (5.88)
+|   |   |   |   |   |   gender = Other: '(-inf-0.5]' (0.0)
+|   |   |   |   |   smoking_history = ever
+|   |   |   |   |   |   gender = Female: '(-inf-0.5]' (94.02/23.53)
+|   |   |   |   |   |   gender = Male: '(0.5-inf)' (111.15/46.45)
+|   |   |   |   |   |   gender = Other: '(-inf-0.5]' (0.0)
+|   |   |   |   |   smoking_history = not current
+|   |   |   |   |   |   heart_disease = '(-inf-0.5]': '(-inf-0.5]' (345.13/135.29)
+|   |   |   |   |   |   heart_disease = '(0.5-inf)': '(0.5-inf)' (5.88)
+|   |   |   |   bmi = '(0.5-inf)': '(0.5-inf)' (31.73/8.2)
+|   |   |   hypertension = '(0.5-inf)': '(0.5-inf)' (186.82/33.88)
+|   |   age = '(0.5-inf)': '(0.5-inf)' (15219.9/2755.19)
+blood_glucose_level = '(0.5-inf)'
+|   age = '(-inf-0.5]'
+|   |   HbA1c_level = '(-inf-0.5]'
+|   |   |   heart_disease = '(-inf-0.5]'
+|   |   |   |   hypertension = '(-inf-0.5]': '(-inf-0.5]' (1354.42/535.29)
+|   |   |   |   hypertension = '(0.5-inf)'
+|   |   |   |   |   smoking_history = never: '(0.5-inf)' (49.37/8.2)
+|   |   |   |   |   smoking_history = No Info: '(0.5-inf)' (0.0)
+|   |   |   |   |   smoking_history = current: '(-inf-0.5]' (4.37)
+|   |   |   |   |   smoking_history = former: '(0.5-inf)' (12.86/1.09)
+|   |   |   |   |   smoking_history = ever: '(-inf-0.5]' (1.09)
+|   |   |   |   |   smoking_history = not current: '(0.5-inf)' (6.43/0.55)
+|   |   |   heart_disease = '(0.5-inf)': '(0.5-inf)' (24.62/1.09)
+|   |   HbA1c_level = '(0.5-inf)': '(0.5-inf)' (1169.37/192.9)
+|   age = '(0.5-inf)': '(0.5-inf)' (18714.3/1343.72)
+
+Number of Leaves  : 	49
+
+Size of the tree : 	76
+
+
+Time taken to build model: 0.15 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       58426.6116          80.3999 %
+Incorrectly Classified Instances     14243.3934          19.6001 %
+Kappa statistic                          0.6015
+Mean absolute error                      0.2817
+Root mean squared error                  0.3766
+Relative absolute error                 57.4738 %
+Root relative squared error             76.0762 %
+Total Number of Instances            72670.0051
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.786    0.183    0.764      0.786    0.775      0.602    0.860     0.809     '(-inf-0.5]'
+                 0.817    0.214    0.835      0.817    0.826      0.602    0.860     0.873     '(0.5-inf)'
+Weighted Avg.    0.804    0.200    0.805      0.804    0.804      0.602    0.860     0.845     
+
+=== Confusion Matrix ===
+
+     a        b      <-- classified as
+ 24544.26  6678.69 |        a = '(-inf-0.5]'
+  7564.71 33882.35 |        b = '(0.5-inf)'
+
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     diabetes_prediction_dataset-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Lfirst-last-M-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-Rfirst-last-precision6-unset-class-temporarily-weka.filters.supervised.instance.ClassBalancer-num-intervals10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L2
+Instances:    64184
+Attributes:   9
+              gender
+              age
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              HbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+blood_glucose_level = '(-inf-0.5]'
+|   HbA1c_level = '(-inf-0.5]'
+|   |   age = '(-inf-0.5]'
+|   |   |   hypertension = '(-inf-0.5]': '(-inf-0.5]' (10841.24/688.24)
+|   |   |   hypertension = '(0.5-inf)'
+|   |   |   |   smoking_history = never: '(-inf-0.5]' (160.21/70.59)
+|   |   |   |   smoking_history = No Info: '(-inf-0.5]' (0.0)
+|   |   |   |   smoking_history = current: '(-inf-0.5]' (47.96/5.88)
+|   |   |   |   smoking_history = former
+|   |   |   |   |   heart_disease = '(-inf-0.5]': '(-inf-0.5]' (16.39)
+|   |   |   |   |   heart_disease = '(0.5-inf)': '(0.5-inf)' (6.43/0.55)
+|   |   |   |   smoking_history = ever: '(0.5-inf)' (27.48/9.84)
+|   |   |   |   smoking_history = not current: '(-inf-0.5]' (14.63/5.88)
+|   |   age = '(0.5-inf)'
+|   |   |   heart_disease = '(-inf-0.5]'
+|   |   |   |   hypertension = '(-inf-0.5]'
+|   |   |   |   |   bmi = '(-inf-0.5]': '(-inf-0.5]' (16271.52/4952.94)
+|   |   |   |   |   bmi = '(0.5-inf)': '(0.5-inf)' (120.73/44.26)
+|   |   |   |   hypertension = '(0.5-inf)': '(0.5-inf)' (3260.04/1507.1)
+|   |   |   heart_disease = '(0.5-inf)'
+|   |   |   |   hypertension = '(-inf-0.5]'
+|   |   |   |   |   smoking_history = never: '(0.5-inf)' (560.59/207.65)
+|   |   |   |   |   smoking_history = No Info: '(0.5-inf)' (0.0)
+|   |   |   |   |   smoking_history = current: '(0.5-inf)' (181.42/81.42)
+|   |   |   |   |   smoking_history = former
+|   |   |   |   |   |   gender = Female: '(-inf-0.5]' (97.33/47.06)
+|   |   |   |   |   |   gender = Male: '(0.5-inf)' (327.29/150.82)
+|   |   |   |   |   |   gender = Other: '(0.5-inf)' (0.0)
+|   |   |   |   |   smoking_history = ever
+|   |   |   |   |   |   gender = Female: '(-inf-0.5]' (35.26/11.76)
+|   |   |   |   |   |   gender = Male: '(0.5-inf)' (87.5/40.44)
+|   |   |   |   |   |   gender = Other: '(-inf-0.5]' (0.0)
+|   |   |   |   |   smoking_history = not current
+|   |   |   |   |   |   gender = Female: '(0.5-inf)' (51.27/21.86)
+|   |   |   |   |   |   gender = Male: '(-inf-0.5]' (60.82/17.65)
+|   |   |   |   |   |   gender = Other: '(-inf-0.5]' (0.0)
+|   |   |   |   hypertension = '(0.5-inf)': '(0.5-inf)' (617.94/188.52)
+|   HbA1c_level = '(0.5-inf)'
+|   |   age = '(-inf-0.5]'
+|   |   |   hypertension = '(-inf-0.5]'
+|   |   |   |   bmi = '(-inf-0.5]'
+|   |   |   |   |   smoking_history = never: '(-inf-0.5]' (1815.75/529.41)
+|   |   |   |   |   smoking_history = No Info: '(-inf-0.5]' (0.0)
+|   |   |   |   |   smoking_history = current: '(-inf-0.5]' (521.47/217.65)
+|   |   |   |   |   smoking_history = former
+|   |   |   |   |   |   gender = Female: '(-inf-0.5]' (147.77/64.71)
+|   |   |   |   |   |   gender = Male
+|   |   |   |   |   |   |   heart_disease = '(-inf-0.5]': '(-inf-0.5]' (61.62/5.88)
+|   |   |   |   |   |   |   heart_disease = '(0.5-inf)': '(0.5-inf)' (5.88)
+|   |   |   |   |   |   gender = Other: '(-inf-0.5]' (0.0)
+|   |   |   |   |   smoking_history = ever
+|   |   |   |   |   |   gender = Female: '(-inf-0.5]' (94.02/23.53)
+|   |   |   |   |   |   gender = Male: '(0.5-inf)' (111.15/46.45)
+|   |   |   |   |   |   gender = Other: '(-inf-0.5]' (0.0)
+|   |   |   |   |   smoking_history = not current
+|   |   |   |   |   |   heart_disease = '(-inf-0.5]': '(-inf-0.5]' (345.13/135.29)
+|   |   |   |   |   |   heart_disease = '(0.5-inf)': '(0.5-inf)' (5.88)
+|   |   |   |   bmi = '(0.5-inf)': '(0.5-inf)' (31.73/8.2)
+|   |   |   hypertension = '(0.5-inf)': '(0.5-inf)' (186.82/33.88)
+|   |   age = '(0.5-inf)': '(0.5-inf)' (15219.9/2755.19)
+blood_glucose_level = '(0.5-inf)'
+|   age = '(-inf-0.5]'
+|   |   HbA1c_level = '(-inf-0.5]'
+|   |   |   heart_disease = '(-inf-0.5]'
+|   |   |   |   hypertension = '(-inf-0.5]': '(-inf-0.5]' (1354.42/535.29)
+|   |   |   |   hypertension = '(0.5-inf)'
+|   |   |   |   |   smoking_history = never: '(0.5-inf)' (49.37/8.2)
+|   |   |   |   |   smoking_history = No Info: '(0.5-inf)' (0.0)
+|   |   |   |   |   smoking_history = current: '(-inf-0.5]' (4.37)
+|   |   |   |   |   smoking_history = former: '(0.5-inf)' (12.86/1.09)
+|   |   |   |   |   smoking_history = ever: '(-inf-0.5]' (1.09)
+|   |   |   |   |   smoking_history = not current: '(0.5-inf)' (6.43/0.55)
+|   |   |   heart_disease = '(0.5-inf)': '(0.5-inf)' (24.62/1.09)
+|   |   HbA1c_level = '(0.5-inf)': '(0.5-inf)' (1169.37/192.9)
+|   age = '(0.5-inf)': '(0.5-inf)' (18714.3/1343.72)
+
+Number of Leaves  : 	49
+
+Size of the tree : 	76
+
+
+Time taken to build model: 0.17 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       11404.8852          79.7046 %
+Incorrectly Classified Instances      2904.0499          20.2954 %
+Kappa statistic                          0.5894
+Mean absolute error                      0.2872
+Root mean squared error                  0.382 
+Relative absolute error                 58.4805 %
+Root relative squared error             76.9682 %
+Total Number of Instances            14308.9351
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.786    0.195    0.759      0.786    0.772      0.590    0.856     0.785     '(-inf-0.5]'
+                 0.805    0.214    0.829      0.805    0.817      0.590    0.856     0.855     '(0.5-inf)'
+Weighted Avg.    0.797    0.205    0.798      0.797    0.797      0.590    0.856     0.824     
+
+=== Confusion Matrix ===
+
+    a       b      <-- classified as
+ 4928.41 1339.34 |       a = '(-inf-0.5]'
+ 1564.71 6476.47 |       b = '(0.5-inf)'
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     diabetes_prediction_dataset-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Lfirst-last-M-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-Rfirst-last-precision6-unset-class-temporarily-weka.filters.supervised.instance.ClassBalancer-num-intervals10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L2
+Instances:    64184
+Attributes:   9
+              gender
+              age
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              HbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                   Class
+Attribute                   '(-inf-0.5]'        '(0.5-inf)'
+                                  (0.43)             (0.57)
+============================================================
+gender
+  Female               19205.914959992937 21806.882571001985
+  Male                 12012.473487994794 19642.176667001662
+  Other                 7.557375999999999                1.0
+  [total]               31225.94582401415 41450.059238004906
+
+age
+  '(-inf-0.5]'          13447.44593599255 3618.6470949999834
+  '(0.5-inf)'          17777.499887990416  37830.41214300437
+  [total]              31224.945824014147 41449.059238004906
+
+hypertension
+  '(-inf-0.5]'         28793.891568009858   30648.0591300033
+  '(0.5-inf)'           2431.054256000191 10801.000108000346
+  [total]              31224.945824014147 41449.059238004906
+
+heart_disease
+  '(-inf-0.5]'          30149.08260801225 35259.823882003984
+  '(0.5-inf)'           1075.863216000055  6189.235355999969
+  [total]              31224.945824014147 41449.059238004906
+
+smoking_history
+  never                17350.177551989662  19683.35313800167
+  No Info                             1.0                1.0
+  current               4557.283424000404  5577.470643999973
+  former                4242.529376000372   9353.94127000013
+  ever                  1931.054336000141 2777.4706159999882
+  not current           3146.901136000263  4059.823569999981
+  [total]              31228.945824014158 41453.059238004906
+
+bmi
+  '(-inf-0.5]'          31090.06606401391   40718.6474660048
+  '(0.5-inf)'           134.8797599999997  730.4117719999996
+  [total]              31224.945824014147 41449.059238004906
+
+HbA1c_level
+  '(-inf-0.5]'         25949.083280004837 16218.647221001153
+  '(0.5-inf)'           5275.862544000476 25230.412017002494
+  [total]              31224.945824014147 41449.059238004906
+
+blood_glucose_level
+  '(-inf-0.5]'          28851.81505600996 22483.353166002085
+  '(0.5-inf)'           2373.130768000185  18965.70607200156
+  [total]              31224.945824014147 41449.059238004906
+
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       58629.5689          80.6792 %
+Incorrectly Classified Instances     14040.4362          19.3208 %
+Kappa statistic                          0.6066
+Mean absolute error                      0.2672
+Root mean squared error                  0.3741
+Relative absolute error                 54.5108 %
+Root relative squared error             75.5814 %
+Total Number of Instances            72670.0051
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.784    0.176    0.770      0.784    0.777      0.607    0.875     0.834     '(-inf-0.5]'
+                 0.824    0.216    0.835      0.824    0.829      0.607    0.875     0.903     '(0.5-inf)'
+Weighted Avg.    0.807    0.199    0.807      0.807    0.807      0.607    0.875     0.873     
+
+=== Confusion Matrix ===
+
+     a        b      <-- classified as
+ 24482.51  6740.44 |        a = '(-inf-0.5]'
+  7300    34147.06 |        b = '(0.5-inf)'
+
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     diabetes_prediction_dataset-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Lfirst-last-M-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-Rfirst-last-precision6-unset-class-temporarily-weka.filters.supervised.instance.ClassBalancer-num-intervals10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L2
+Instances:    64184
+Attributes:   9
+              gender
+              age
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              HbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                   Class
+Attribute                   '(-inf-0.5]'        '(0.5-inf)'
+                                  (0.43)             (0.57)
+============================================================
+gender
+  Female               19205.914959992937 21806.882571001985
+  Male                 12012.473487994794 19642.176667001662
+  Other                 7.557375999999999                1.0
+  [total]               31225.94582401415 41450.059238004906
+
+age
+  '(-inf-0.5]'          13447.44593599255 3618.6470949999834
+  '(0.5-inf)'          17777.499887990416  37830.41214300437
+  [total]              31224.945824014147 41449.059238004906
+
+hypertension
+  '(-inf-0.5]'         28793.891568009858   30648.0591300033
+  '(0.5-inf)'           2431.054256000191 10801.000108000346
+  [total]              31224.945824014147 41449.059238004906
+
+heart_disease
+  '(-inf-0.5]'          30149.08260801225 35259.823882003984
+  '(0.5-inf)'           1075.863216000055  6189.235355999969
+  [total]              31224.945824014147 41449.059238004906
+
+smoking_history
+  never                17350.177551989662  19683.35313800167
+  No Info                             1.0                1.0
+  current               4557.283424000404  5577.470643999973
+  former                4242.529376000372   9353.94127000013
+  ever                  1931.054336000141 2777.4706159999882
+  not current           3146.901136000263  4059.823569999981
+  [total]              31228.945824014158 41453.059238004906
+
+bmi
+  '(-inf-0.5]'          31090.06606401391   40718.6474660048
+  '(0.5-inf)'           134.8797599999997  730.4117719999996
+  [total]              31224.945824014147 41449.059238004906
+
+HbA1c_level
+  '(-inf-0.5]'         25949.083280004837 16218.647221001153
+  '(0.5-inf)'           5275.862544000476 25230.412017002494
+  [total]              31224.945824014147 41449.059238004906
+
+blood_glucose_level
+  '(-inf-0.5]'          28851.81505600996 22483.353166002085
+  '(0.5-inf)'           2373.130768000185  18965.70607200156
+  [total]              31224.945824014147 41449.059238004906
+
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       11497.1385          80.3494 %
+Incorrectly Classified Instances      2811.7966          19.6506 %
+Kappa statistic                          0.6013
+Mean absolute error                      0.2701
+Root mean squared error                  0.3761
+Relative absolute error                 55.0099 %
+Root relative squared error             75.7866 %
+Total Number of Instances            14308.9351
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.780    0.178    0.773      0.780    0.777      0.601    0.874     0.838     '(-inf-0.5]'
+                 0.822    0.220    0.828      0.822    0.825      0.601    0.874     0.894     '(0.5-inf)'
+Weighted Avg.    0.803    0.202    0.804      0.803    0.804      0.601    0.874     0.869     
+
+=== Confusion Matrix ===
+
+    a       b      <-- classified as
+ 4891.26 1376.5  |       a = '(-inf-0.5]'
+ 1435.29 6605.88 |       b = '(0.5-inf)'
+
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.ZeroR 
+Relation:     diabetes_prediction_dataset-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Lfirst-last-M-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-Rfirst-last-precision6-unset-class-temporarily-weka.filters.supervised.instance.ClassBalancer-num-intervals10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L2
+Instances:    64184
+Attributes:   9
+              gender
+              age
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              HbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+ZeroR predicts class value: '(0.5-inf)'
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       41447.0592          57.0346 %
+Incorrectly Classified Instances     31222.9458          42.9654 %
+Kappa statistic                          0     
+Mean absolute error                      0.4901
+Root mean squared error                  0.495 
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances            72670.0051
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.430     '(-inf-0.5]'
+                 1.000    1.000    0.570      1.000    0.726      ?        0.500     0.570     '(0.5-inf)'
+Weighted Avg.    0.570    0.570    ?          0.570    ?          ?        0.500     0.510     
+
+=== Confusion Matrix ===
+
+     a        b      <-- classified as
+     0    31222.95 |        a = '(-inf-0.5]'
+     0    41447.06 |        b = '(0.5-inf)'
+
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.ZeroR 
+Relation:     diabetes_prediction_dataset-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Lfirst-last-M-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-Rfirst-last-precision6-unset-class-temporarily-weka.filters.supervised.instance.ClassBalancer-num-intervals10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L2
+Instances:    64184
+Attributes:   9
+              gender
+              age
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              HbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+ZeroR predicts class value: '(0.5-inf)'
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        8041.1766          56.1969 %
+Incorrectly Classified Instances      6267.7586          43.8031 %
+Kappa statistic                          0     
+Mean absolute error                      0.491 
+Root mean squared error                  0.4963
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances            14308.9351
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.438     '(-inf-0.5]'
+                 1.000    1.000    0.562      1.000    0.720      ?        0.500     0.562     '(0.5-inf)'
+Weighted Avg.    0.562    0.562    ?          0.562    ?          ?        0.500     0.508     
+
+=== Confusion Matrix ===
+
+    a       b      <-- classified as
+    0    6267.76 |       a = '(-inf-0.5]'
+    0    8041.18 |       b = '(0.5-inf)'
+
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     diabetes_prediction_dataset-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Lfirst-last-M-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-Rfirst-last-precision6-unset-class-temporarily-weka.filters.supervised.instance.ClassBalancer-num-intervals10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L2
+Instances:    64184
+Attributes:   9
+              gender
+              age
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              HbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       58363.1272          80.3125 %
+Incorrectly Classified Instances     14306.8778          19.6875 %
+Kappa statistic                          0.6001
+Mean absolute error                      0.2754
+Root mean squared error                  0.3734
+Relative absolute error                 56.1982 %
+Root relative squared error             75.4302 %
+Total Number of Instances            72670.0051
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.790    0.187    0.761      0.790    0.775      0.600    0.874     0.815     '(-inf-0.5]'
+                 0.813    0.210    0.837      0.813    0.825      0.600    0.874     0.903     '(0.5-inf)'
+Weighted Avg.    0.803    0.200    0.804      0.803    0.804      0.600    0.874     0.865     
+
+=== Confusion Matrix ===
+
+     a        b      <-- classified as
+ 24651.36  6571.58 |        a = '(-inf-0.5]'
+  7735.29 33711.77 |        b = '(0.5-inf)'
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     diabetes_prediction_dataset-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Lfirst-last-M-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-Rfirst-last-precision6-unset-class-temporarily-weka.filters.supervised.instance.ClassBalancer-num-intervals10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L2
+Instances:    64184
+Attributes:   9
+              gender
+              age
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              HbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 32.99 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       11403.4387          79.6945 %
+Incorrectly Classified Instances      2905.4964          20.3055 %
+Kappa statistic                          0.5886
+Mean absolute error                      0.2826
+Root mean squared error                  0.3812
+Relative absolute error                 57.5535 %
+Root relative squared error             76.8158 %
+Total Number of Instances            14308.9351
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.780    0.189    0.762      0.780    0.771      0.589    0.865     0.802     '(-inf-0.5]'
+                 0.811    0.220    0.825      0.811    0.818      0.589    0.865     0.891     '(0.5-inf)'
+Weighted Avg.    0.797    0.207    0.798      0.797    0.797      0.589    0.865     0.852     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4886 1382 |    a = '(-inf-0.5]'
+ 1524 6518 |    b = '(0.5-inf)'
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 3 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     diabetes_prediction_dataset-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Lfirst-last-M-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-Rfirst-last-precision6-unset-class-temporarily-weka.filters.supervised.instance.ClassBalancer-num-intervals10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L2
+Instances:    64184
+Attributes:   9
+              gender
+              age
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              HbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 3 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       58374.2169          80.3278 %
+Incorrectly Classified Instances     14295.7882          19.6722 %
+Kappa statistic                          0.6004
+Mean absolute error                      0.2754
+Root mean squared error                  0.3728
+Relative absolute error                 56.1842 %
+Root relative squared error             75.3189 %
+Total Number of Instances            72670.0051
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.789    0.186    0.762      0.789    0.775      0.601    0.875     0.820     '(-inf-0.5]'
+                 0.814    0.211    0.837      0.814    0.825      0.601    0.875     0.904     '(0.5-inf)'
+Weighted Avg.    0.803    0.200    0.804      0.803    0.804      0.601    0.875     0.868     
+
+=== Confusion Matrix ===
+
+     a        b      <-- classified as
+ 24644.8   6578.14 |        a = '(-inf-0.5]'
+  7717.65 33729.41 |        b = '(0.5-inf)'
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 3 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     diabetes_prediction_dataset-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Lfirst-last-M-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-Rfirst-last-precision6-unset-class-temporarily-weka.filters.supervised.instance.ClassBalancer-num-intervals10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L2
+Instances:    64184
+Attributes:   9
+              gender
+              age
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              HbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 3 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 33.57 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       11402.8922          79.6907 %
+Incorrectly Classified Instances      2906.0429          20.3093 %
+Kappa statistic                          0.5885
+Mean absolute error                      0.2829
+Root mean squared error                  0.3804
+Relative absolute error                 57.6048 %
+Root relative squared error             76.6602 %
+Total Number of Instances            14308.9351
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.779    0.189    0.762      0.779    0.771      0.589    0.866     0.809     '(-inf-0.5]'
+                 0.811    0.221    0.825      0.811    0.818      0.589    0.866     0.892     '(0.5-inf)'
+Weighted Avg.    0.797    0.207    0.798      0.797    0.797      0.589    0.866     0.855     
+
+=== Confusion Matrix ===
+
+    a       b      <-- classified as
+ 4885.25 1382.51 |       a = '(-inf-0.5]'
+ 1523.53 6517.65 |       b = '(0.5-inf)'
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 5 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     diabetes_prediction_dataset-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Lfirst-last-M-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-Rfirst-last-precision6-unset-class-temporarily-weka.filters.supervised.instance.ClassBalancer-num-intervals10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L2
+Instances:    64184
+Attributes:   9
+              gender
+              age
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              HbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 5 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       58388.1674          80.347  %
+Incorrectly Classified Instances     14281.8377          19.653  %
+Kappa statistic                          0.6008
+Mean absolute error                      0.2755
+Root mean squared error                  0.3726
+Relative absolute error                 56.2071 %
+Root relative squared error             75.2651 %
+Total Number of Instances            72670.0051
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.789    0.186    0.762      0.789    0.775      0.601    0.875     0.823     '(-inf-0.5]'
+                 0.814    0.211    0.837      0.814    0.825      0.601    0.875     0.904     '(0.5-inf)'
+Weighted Avg.    0.803    0.200    0.805      0.803    0.804      0.601    0.875     0.869     
+
+=== Confusion Matrix ===
+
+     a        b      <-- classified as
+ 24646.99  6575.96 |        a = '(-inf-0.5]'
+  7705.88 33741.18 |        b = '(0.5-inf)'
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 5 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     diabetes_prediction_dataset-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-Clast-Lfirst-last-M-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-Rfirst-last-precision6-unset-class-temporarily-weka.filters.supervised.instance.ClassBalancer-num-intervals10-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C5-L2
+Instances:    64184
+Attributes:   9
+              gender
+              age
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              HbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 5 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 33.42 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       11419.4464          79.8064 %
+Incorrectly Classified Instances      2889.4887          20.1936 %
+Kappa statistic                          0.5907
+Mean absolute error                      0.2824
+Root mean squared error                  0.3791
+Relative absolute error                 57.5095 %
+Root relative squared error             76.4003 %
+Total Number of Instances            14308.9351
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.779    0.187    0.764      0.779    0.772      0.591    0.868     0.815     '(-inf-0.5]'
+                 0.813    0.221    0.825      0.813    0.819      0.591    0.868     0.893     '(0.5-inf)'
+Weighted Avg.    0.798    0.206    0.799      0.798    0.798      0.591    0.868     0.859     
+
+=== Confusion Matrix ===
+
+    a       b      <-- classified as
+ 4884.15 1383.61 |       a = '(-inf-0.5]'
+ 1505.88 6535.29 |       b = '(0.5-inf)'
+
